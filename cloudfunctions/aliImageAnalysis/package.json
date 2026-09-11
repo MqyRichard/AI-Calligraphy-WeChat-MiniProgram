@@ -1,0 +1,10 @@
+{
+  "name": "aliImageAnalysis",
+  "version": "1.0.0",
+  "description": "使用OpenAI兼容接口调用阿里云通义千问多模态API",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.7.0",
+    "openai": "^4.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+<view class="upload-container">
+  <view class="user-info">
+    <image class="avatar" wx:if="{{userInfo.avatarUrl}}" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+    <text class="nickname">{{userInfo.nickName || "未登录"}}</text>
+  </view>
+
+  <view class="upload-box" bindtap="chooseImage">
+    <image class="preview" wx:if="{{imageUrl}}" src="{{imageUrl}}" mode="aspectFill"></image>
+    <text wx:else class="upload-placeholder">+</text>
+  </view>
+
+  <view class="button-group">
+    <button class="submit-btn" bindtap="uploadToCloud" wx:if="{{imageUrl}}">提交图片</button>
+  </view>
+</view>

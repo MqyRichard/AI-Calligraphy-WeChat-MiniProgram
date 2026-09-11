@@ -1,0 +1,7 @@
+<view class="home-container">
+  <image class="avatar" wx:if="{{userInfo.avatarUrl}}" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+  <text class="nickname">{{userInfo.nickName || "未登录"}}</text>
+
+  <button class="login-btn" wx:if="!userInfo.openid" bindtap="login">登录</button>
+  <button class="portfolio-btn" wx:if="{{userInfo.openid}}" bindtap="goToPortfolio">我的作品</button>
+</view>

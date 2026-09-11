@@ -1,0 +1,31 @@
+<view class="display-container">
+  <block wx:if="{{images.length > 0}}">
+    <view class="image-grid">
+      <view class="column">
+        <block wx:for="{{leftColumn}}" wx:key="*this">
+          <view class="image-item" bindtap="goToDetail" data-id="{{item.id}}" data-url="{{item.url}}">
+            <image class="image" src="{{item.url}}" mode="aspectFill"></image>
+          </view>
+        </block>
+      </view>
+      <view class="column">
+        <block wx:for="{{rightColumn}}" wx:key="*this">
+          <view class="image-item" bindtap="goToDetail" data-id="{{item.id}}" data-url="{{item.url}}">
+            <image class="image" src="{{item.url}}" mode="aspectFill"></image>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="empty-text">暂无图片</view>
+  </block>
+
+  <view class="pagination">
+    <button wx:if="{{page > 1}}" bindtap="goToFirstPage" class="nav-button">首页</button>
+    <button wx:if="{{page > 1}}" bindtap="prevPage" class="nav-button">上一页</button>
+    <text class="page-info">第 {{page}} / {{totalPages}} 页</text>
+    <button wx:if="{{page < totalPages}}" bindtap="nextPage" class="nav-button">下一页</button>
+    <button wx:if="{{page < totalPages}}" bindtap="goToLastPage" class="nav-button">末页</button>
+  </view>
+</view>

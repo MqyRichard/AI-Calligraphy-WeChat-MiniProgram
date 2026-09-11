@@ -1,0 +1,14 @@
+<view class="portfolio-container">
+  <block wx:if="{{imageList.length > 0}}">
+    <view class="image-grid">
+      <block wx:for="{{imageList}}" wx:key="*this">
+        <view class="image-item" bindtap="viewDetail" data-id="{{item.id}}" data-url="{{item.url}}">
+          <image class="image" src="{{item.url}}" mode="aspectFill"></image>
+        </view>
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="empty-text">你还没有上传任何作品</view>
+  </block>
+</view>

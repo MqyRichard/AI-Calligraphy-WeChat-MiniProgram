@@ -1,0 +1,19 @@
+<view class="masterdisplay-container">
+  <view class="author-title">{{author}}作品集</view>
+
+  <block wx:if="{{imageList.length > 0}}">
+    <view class="image-grid">
+      <block wx:for="{{imageList}}" wx:key="id">
+        <view class="image-item" bindtap="handleImageTap" data-id="{{item.id}}" data-url="{{item.url}}">
+          <image class="image" src="{{item.displayUrl}}" mode="aspectFill"></image>
+        </view>
+      </block>
+    </view>
+  </block>
+  
+  <block wx:else>
+    <view class="empty-text">暂无作品</view>
+  </block>
+
+  <view wx:if="{{!hasMore && imageList.length > 0}}" class="no-more">没有更多作品了</view>
+</view>

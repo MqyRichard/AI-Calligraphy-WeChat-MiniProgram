@@ -1,0 +1,43 @@
+.masterdisplay-container {
+  padding: 20rpx;
+}
+
+.author-title {
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image-item {
+  width: 48%;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.empty-text {
+  text-align: center;
+  color: #999;
+  margin-top: 50rpx;
+}
+
+.no-more {
+  text-align: center;
+  color: #999;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+}

@@ -1,0 +1,68 @@
+<!-- 页面标题 -->
+<view class="header">
+  <text class="title">书法作品对比分析</text>
+  <text class="subtitle">上传您的临摹作品进行专业对比</text>
+</view>
+
+<!-- 系统原图展示 -->
+<view class="image-section">
+  <text class="section-title">原作参考</text>
+  <image 
+    src="{{systemImageId}}" 
+    mode="aspectFit" 
+    class="reference-image"
+  ></image>
+</view>
+
+<!-- 用户上传区域 -->
+<view class="upload-section">
+  <text class="section-title">您的临摹作品</text>
+  <block wx:if="{{!userImagePath}}">
+    <button 
+      bindtap="chooseImage" 
+      class="upload-button"
+      hover-class="button-hover"
+    >
+      <text>点击上传图片</text>
+    </button>
+  </block>
+  <block wx:else>
+    <image 
+      src="{{userImagePath}}" 
+      mode="aspectFit" 
+      class="user-image"
+    />
+    <button 
+      bindtap="chooseImage" 
+      class="reupload-button"
+      hover-class="button-hover"
+    >
+      重新上传
+    </button>
+  </block>
+</view>
+
+<!-- 分析按钮 -->
+<view class="action-section" wx:if="{{userImagePath}}">
+  <button 
+    bindtap="uploadUserImage" 
+    class="analyze-button"
+    loading="{{loading}}"
+    disabled="{{loading}}"
+  >
+    {{loading ? '分析中...' : '开始分析'}}
+  </button>
+</view>
+
+<!-- 分析结果 -->
+<view class="result-section" wx:if="{{result}}">
+  <text class="section-title">分析结果</text>
+  <scroll-view scroll-y class="result-content">
+    {{result}}
+  </scroll-view>
+</view>
+
+<!-- 加载状态 -->
+<view wx:if="{{loading}}" class="loading-mask">
+  <text>正在分析中，请稍等...</text>
+</view>

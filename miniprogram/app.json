@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/upload/upload",
+    "pages/display/display",
+    "pages/detail/detail",
+    "pages/portfolio/portfolio",
+    "pages/home/home",
+    "pages/masterworks/masterworks",
+    "pages/uploadart/uploadart",
+    "pages/selectauthor/selectauthor",
+    "pages/masterdisplay/masterdisplay",
+    "pages/compare/compare",
+    "pages/evaluate/evaluate",
+    "pages/weimagefilter/weimagefilter",
+    "pages/test/test"
+  ],
+  "cloud": true,
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "window": {
+    "navigationStyle": "default",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "书法鉴赏",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/display/display",
+        "text": "作品展示"
+      },
+      {
+        "pagePath": "pages/masterworks/masterworks",
+        "text": "名家鉴赏"
+      },
+      {
+        "pagePath": "pages/evaluate/evaluate",
+        "text": "作品评鉴"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的主页"
+      }
+    ]
+  }
+}

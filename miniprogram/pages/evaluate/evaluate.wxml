@@ -1,0 +1,18 @@
+<view class="container">
+  <text class="title">书法作品智能评价</text>
+
+  <button bindtap="chooseImage" class="choose-button" hover-class="button-hover">
+    上传您的书法作品
+  </button>
+
+  <image wx:if="{{imageUrl}}" src="{{imageUrl}}" mode="widthFix" class="preview-image" />
+
+  <view wx:if="{{loading}}" class="loading">
+    <text>AI 正在分析，请稍候...</text>
+  </view>
+
+  <view wx:if="{{result}}" class="result">
+    <text class="result-title">分析结果</text>
+    <text class="result-text">{{result}}</text>
+  </view>
+</view>

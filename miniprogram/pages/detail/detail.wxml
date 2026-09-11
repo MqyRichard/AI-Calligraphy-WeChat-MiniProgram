@@ -1,0 +1,44 @@
+<view class="container">
+  <!-- 图片展示 -->
+  <view class="image-container">
+    <image class="display-image" src="{{imageUrl}}" mode="widthFix"></image>
+  </view>
+
+  <view class="divider"></view>
+
+  <!-- 评分栏 -->
+  <view class="rating-container">
+    <text class="rating-label">评分：</text>
+    <block wx:for="{{[1, 2, 3, 4, 5]}}" wx:key="index">
+      <view class="star-box" bindtap="setRating" data-value="{{item}}">
+        <text class="star {{item <= rating ? 'selected' : ''}}">★</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="divider"></view>
+
+  <!-- 评论输入 -->
+  <view class="comment-box">
+    <textarea class="comment-input" placeholder="写下你的评论..." bindinput="onCommentInput"></textarea>
+    <button class="submit-button" bindtap="submitComment">提交</button>
+  </view>
+
+  <view class="divider"></view>
+
+  <!-- 评论区 -->
+  <view class="comments-section">
+    <block wx:for="{{comments}}" wx:key="index">
+      <view class="comment-item">
+        <image class="avatar" src="{{item.avatarUrl}}"></image>
+        <view class="comment-content">
+          <view class="comment-header">
+            <text class="username">{{item.username}}</text>
+            <text class="rating">评分：{{item.rating}}</text>
+          </view>
+          <text class="comment-text">{{item.text}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

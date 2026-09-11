@@ -1,0 +1,36 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx;
+}
+
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+  border: 4rpx solid #d19c67;
+}
+
+.nickname {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40rpx;
+}
+
+.login-btn, .portfolio-btn {
+  width: 80%;
+  height: 80rpx;
+  margin-top: 20rpx;
+  background-color: #d19c67;
+  color: white;
+  font-size: 32rpx;
+  border-radius: 40rpx;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

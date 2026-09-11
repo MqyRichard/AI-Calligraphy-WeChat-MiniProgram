@@ -1,0 +1,72 @@
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx;
+}
+
+/* 用户信息 */
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.nickname {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 上传框 */
+.upload-box {
+  width: 200rpx;
+  height: 200rpx;
+  border: 2rpx dashed #aaa;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  margin-bottom: 20rpx;
+}
+
+.upload-placeholder {
+  font-size: 80rpx;
+  color: #999;
+}
+
+.preview {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+/* 按钮组 */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 80rpx;
+  margin-top: 20rpx;
+  background-color: #d19c67;
+  color: white;
+  font-size: 32rpx;
+  border-radius: 40rpx;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

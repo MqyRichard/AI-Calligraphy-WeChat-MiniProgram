@@ -1,0 +1,11 @@
+{
+  "envId": "cloud1-3g8k0qpw6d5d7fbf",
+  "functions": [
+    {
+      "name": "compare_lpips",
+      "runtime": "Python3.9",
+      "handler": "index.main",
+      "timeout": 30
+    }
+  ]
+}

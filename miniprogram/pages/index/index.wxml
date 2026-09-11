@@ -1,0 +1,15 @@
+<view class="container">
+  <image class="bg-image" src="cloud://cloud1-3g8k0qpw6d5d7fbf.636c-cloud1-3g8k0qpw6d5d7fbf-1350468256/background.png" mode="aspectFill"></image>
+
+  <text class="title">书法鉴赏</text>
+
+  <image class="banner" src="cloud://cloud1-3g8k0qpw6d5d7fbf.636c-cloud1-3g8k0qpw6d5d7fbf-1350468256/calligraph.jpg" mode="aspectFit"></image>
+
+  <button class="nav-button-upload" bindtap="goToUpload">
+    上传原创作品
+  </button>
+
+  <button class="nav-button-selectauthor" bindtap="goToSelectAuthor">
+    上传名家作品
+  </button>
+</view>

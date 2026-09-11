@@ -1,0 +1,6 @@
+<view class="author-container">
+  <view wx:for="{{authorList}}" wx:key="index" class="author-item" bindtap="selectAuthor" data-author="{{item.name}}">
+    <image class="author-img" src="{{item.imageUrl}}" mode="aspectFill"></image>
+    <text class="author-name">{{item.name}}</text>
+  </view>
+</view>
